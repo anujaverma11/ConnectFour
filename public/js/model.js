@@ -4,7 +4,7 @@
 //   // when we try to bind to them
 
 //   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-// });
+console.log('model loaded')
 
 
 var Player = function() {
@@ -154,31 +154,32 @@ Game.prototype.checkWin = function(){
   };
 };
 
+// });
 
-var game = new Game();
+// var game = new Game();
 
-game.startGame();
+// game.startGame();
 
-game.player1.choiceColumn = 'c1';
-game.makeMove();
+// game.player1.choiceColumn = 'c1';
+// game.makeMove();
 
-game.player2.choiceColumn = 'c6';
-game.makeMove();
+// game.player2.choiceColumn = 'c6';
+// game.makeMove();
 
-game.player1.choiceColumn = 'c2';
-game.makeMove();
+// game.player1.choiceColumn = 'c2';
+// game.makeMove();
 
-game.player2.choiceColumn = 'c6';
-game.makeMove();
+// game.player2.choiceColumn = 'c6';
+// game.makeMove();
 
-game.player1.choiceColumn = 'c3';
-game.makeMove();
+// game.player1.choiceColumn = 'c3';
+// game.makeMove();
 
-game.player2.choiceColumn = 'c5';
-game.makeMove();
+// game.player2.choiceColumn = 'c5';
+// game.makeMove();
 
-game.player1.choiceColumn = 'c4';
-game.makeMove();
+// game.player1.choiceColumn = 'c4';
+// game.makeMove();
 
 // game.player1.choiceColumn = 'c4';
 // game.makeMove();
