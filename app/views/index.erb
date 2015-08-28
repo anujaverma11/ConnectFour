@@ -7,13 +7,15 @@
 	<th class="column_6"><button type="button">Col 6</button></th>
 	<th class="column_7"><button type="button">Col 7</button></th>
 	<% (6).times do |tr| %>
-	<tr id="c<%= tr + 1 %>" ></tr> 
+	<tr id="c<%= 1 + tr %>" ></tr> 
 	<% (7).times do |td| %>
-		<td class="circle" id="c<%= tr + 1 %><%= td + 1%>"></td> 
+		<td class="circle" id="c<%= 1 + tr %><%= td + 1%>"></td> 
 	<%end%>
 <%end%>
 
 
 
+</div>
 
+</div>
 </table>	
