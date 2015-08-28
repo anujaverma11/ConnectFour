@@ -1,0 +1,21 @@
+<table border='5'>
+	<th class="column_1"><button type="button">Col 1</button></th>
+	<th class="column_2"><button type="button">Col 2</button></th>
+	<th class="column_3"><button type="button">Col 3</button></th>
+	<th class="column_4"><button type="button">Col 4</button></th>
+	<th class="column_5"><button type="button">Col 5</button></th>
+	<th class="column_6"><button type="button">Col 6</button></th>
+	<th class="column_7"><button type="button">Col 7</button></th>
+	<% (6).times do |tr| %>
+	<tr id="c<%= 1 + tr %>" ></tr> 
+	<% (7).times do |td| %>
+		<td class="circle" id="c<%= 1 + tr %><%= td + 1%>"></td> 
+	<%end%>
+<%end%>
+
+
+
+</div>
+
+</div>
+</table>	
