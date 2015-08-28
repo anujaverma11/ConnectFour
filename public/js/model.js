@@ -10,6 +10,7 @@ console.log('model loaded')
 var Player = function() {
   this.enabled = false;
   this.choiceColumn = null;
+  this.position = null;
 };
 
 
@@ -81,6 +82,7 @@ Game.prototype.makeMove = function(){
   if(this.player1.enabled === true){
     // this.player1.choiceColumn = 'c1'; // player chooses column
     var position = this.placePiece(this.player1.choiceColumn,'r');
+    this.player1.position = position;
     this.player1.enabled = false;
     this.player2.enabled = true;
     this.scanColumnForR(this.player1.choiceColumn);
@@ -89,6 +91,7 @@ Game.prototype.makeMove = function(){
   else if(this.player2.enabled === true){
     // this.player2.choiceColumn = 'c1'; // player chooses column
     var position = this.placePiece(this.player2.choiceColumn, 'b');
+    this.player2.position = position;
     this.player2.enabled = false;
     this.player1.enabled = true;
     this.scanColumnForB(this.player2.choiceColumn);
@@ -102,7 +105,8 @@ Game.prototype.scanColumnForR = function(column){
   for (var row = 6; row > 0; row--){
     if (this.board[column][row] === 'r'){
       this.columnConnectFour.push('r');
-      this.checkWin();
+      // this.checkWin();
+      console.log("a " + this.checkWin())
     } else {
       this.columnConnectFour = [];
       };
@@ -149,9 +153,13 @@ Game.prototype.scanRowForB = function(row){
 
 
 Game.prototype.checkWin = function(){
-  if(this.columnConnectFour.length === 4 || this.rowConnectFour.length === 4){
-    console.log("you win!");
-  };
+  if((this.columnConnectFour.length === 4) || (this.rowConnectFour.length === 4)){
+    console.log(this.columnConnectFour.length)
+    console.log("winner");
+    return true;
+  } else {
+      return false;
+    };
 };
 
 // });
