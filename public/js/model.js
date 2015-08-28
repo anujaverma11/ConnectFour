@@ -37,7 +37,9 @@ c7: {'1': '', '2': '', '3': '', '4': '', '5': '', '6': ''}
 
 //   }
 // }
-
+Game.prototype.checkColumn = function(column){
+  if this.board
+}
 
 
 Game.prototype.placePiece = function(column, color){
@@ -47,6 +49,9 @@ Game.prototype.placePiece = function(column, color){
     if (this.board[column][i] === ''){
       this.board[column][i] = color
       return;
+    } else {
+      console.log('column is full!')
+    };
     };
   };
 };
